@@ -1,0 +1,28 @@
+The purpose of this project:
+
+-this project will help me get to learn a more recent backend experience
+-this project will be mostly backend orientated but I will make sure the frontend is of an equal level so that this can also be promoted on my portfolio
+-this project is for a real client, yet the client is myself.
+
+The scope:
+
+-the website shall have an authentication page with working authentication
+	we will be using a database to store the authentication data and this data will be secured via encryption
+-the website will have multiple pages after authentication
+	when not authenticated these pages will not show
+-the pages included shall have backend functionalities aswell
+	-a to-do list page that saves a list of things to do
+		-the items on this list can be completed, deleted, edited, added, prioratized
+		-on creating items with the guest account it will be deleted on logout to save server space
+	-a fitness page that will containt workout notes, nutrition notes, excercise notes
+		-full customization of workouts with added exercises
+		-import of json file
+		-use the garmin api to add watch data?
+		-nutrition can contain mainly the bought nutrition supplements and maybe recepies that are good for both bulk and cut?
+		-excercises can be added, edited, deleted and there will be already a set of exercises with there propper explanation, working musceles, things to watch out for
+		-the workout wlll contain fields for the variation (barbell, dungbells, kettlebell, machine) the metrics (kgs, lbs), the weight, the reps, the sets and an optional field of things to work on 
+		-the things to work on will always be on top of the page until completed.
+
+possibly it would be wiser to start with the to-do list website first and make a seperate website for the fitness idea
+	-this would add 2 websites with backend to my portfolio
+
