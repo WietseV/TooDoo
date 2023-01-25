@@ -14,6 +14,6 @@
     @apply bg-gradient-to-b from-green-700 to-green-300
 }
 
-.editgradient {
-    @apply bg-gradient-to-b from-yellow-700 to-yellow-300
+.batterygradient {
+    @apply bg-gradient-to-b from-green-700 via-yellow-700 to-red-700
 }
