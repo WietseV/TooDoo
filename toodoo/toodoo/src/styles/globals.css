@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.gradient {
+    @apply bg-gradient-to-b from-purple-700 to-purple-300
+}
+
+.prioritygradient {
+    @apply bg-gradient-to-b from-red-700 to-red-300
+}
+
+.completedgradient {
+    @apply bg-gradient-to-b from-green-700 to-green-300
+}
+
+.editgradient {
+    @apply bg-gradient-to-b from-yellow-700 to-yellow-300
+}
