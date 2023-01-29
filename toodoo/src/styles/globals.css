@@ -13,7 +13,3 @@
 .completedgradient {
     @apply bg-gradient-to-b from-green-700 to-green-300
 }
-
-.batterygradient {
-    @apply bg-gradient-to-b from-green-700 via-yellow-700 to-red-700
-}
