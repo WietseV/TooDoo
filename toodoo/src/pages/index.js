@@ -26,8 +26,7 @@ export default function Home() {
       setTodolist(todoItem.docs.map((doc) => ({...doc.data(), id: doc.id})));
     });
     return unsubscribe;
-  }
-  } 
+  }} 
 
   useEffect(() => {
     getData();
@@ -35,14 +34,12 @@ export default function Home() {
 
   return (
     <>
-      
       <Head>
         <title>TooDoo</title>
         <meta name="description" content="A custom To-Do web application" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
       </Head>
-      
+      {user &&
       <div  className='relative font-poppins h-full min-h-screen py-8 text-sm z-10'>
         <div className='w-full px-8 flex justify-end gap-4 text-black lg:text-white'>
           <div className='flex items-center gap-2'>
@@ -57,6 +54,7 @@ export default function Home() {
         <Form inputText={inputText} setInputText={setInputText} todolist={todolist} setTodolist={setTodolist}/>
         <TodoList todolist={todolist} setTodolist={setTodolist}/>
       </div>
+      }
     </>
   )
 }

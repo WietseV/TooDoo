@@ -14,7 +14,7 @@ export default function Login() {
 
     const GoogleLogin = async() => {
         try {
-            if(user) return;
+            checkUser();
             await signInWithPopup(auth, googleProvider);
             router.push('/');
         } catch (error) {
@@ -23,6 +23,7 @@ export default function Login() {
     }
 
     const checkUser = async () => {
+        if(loading) return;
         if(user) return router.push('/');
       }
     
@@ -35,8 +36,8 @@ export default function Login() {
         <Head>
             <title>Login - TooDoo</title>
             <meta name="viewport" content="width=device-width, initial-scale=1" />
-            <link rel="icon" href="/favicon.ico" />
         </Head>
+        {!user &&
         <div className='relative min-h-screen flex items-center'>
             <div className='flex flex-col justify-center max-w-xl mx-auto p-8 shadow-xl text-center bg-white bg-opacity-50'>
                 <h1 className='text-3xl font-medium py-2 gradient bg-clip-text text-transparent '>TooDoo</h1>
@@ -48,6 +49,7 @@ export default function Login() {
                 </div>
             </div>
         </div>
+        }
         </>
 
     );
