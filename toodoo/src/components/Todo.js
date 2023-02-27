@@ -121,7 +121,7 @@ export default function Todo({todo, todolist, setTodolist}){
                 onChange={editHandler}>{todo.content}</textarea>  
                 }
             </div>
-            <div className="flex justify-end gap-6">
+            <div className="flex justify-end gap-6 text-xl lg:text-base">
                 <button className={`${todo.priority ? "text-white" : ""} ${todo.completed ? "hidden" : ""}`} onClick={priorityHandler}><MdOutlinePriorityHigh /></button>
                 <button className={todo.completed ? "text-white" : ""} onClick={completeHandler}><AiOutlineCheck /></button>
                 <button className={`${editing ? "text-white" : ""} ${todo.completed ? "hidden" : ""}`} onClick={editToggle} ><AiOutlineEdit /></button>
