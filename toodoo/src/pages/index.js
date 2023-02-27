@@ -43,7 +43,7 @@ export default function Home() {
       <div  className='relative font-poppins h-full min-h-screen py-8 text-sm z-10'>
         <div className='w-full px-8 flex justify-end gap-4 text-black lg:text-white'>
           <div className='flex items-center gap-2'>
-            <p>Welcome, {user?.displayName}</p>
+            <p>Welcome, {user?.displayName ? user?.displayName : "Guest"}</p>
           </div>
           <button 
           className=' hover:underline'

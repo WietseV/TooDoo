@@ -32,7 +32,7 @@ export default function Form({inputText, setInputText, todolist, setTodolist}){
             toast.clearWaitingQueue();
             toast.success("You added a to-do item", {
                 position: 'top-center',
-                autoClose: 750,
+                autoClose: 1000,
             })
         }else {
             toast.clearWaitingQueue();
@@ -48,9 +48,9 @@ export default function Form({inputText, setInputText, todolist, setTodolist}){
         <div className="max-w-7xl shadow-lg xl:mx-auto flex justify-center bg-white bg-opacity-50 my-4 mx-2">
             <div className="w-1/3 hidden sm:flex"></div>
             <form  onSubmit={addTodo} className="lg:w-1/3 p-4 flex flex-col items-center">
-                <h1 className=' text-3xl font-medium my-4 gradient text-white skew-y-2 px-4 p-2'>TooDoo</h1>
+                <h1 className=' text-3xl font-medium my-4 gradient text-white skew-y-2 px-4 p-2'><span className="-skew-y-2">TooDoo</span></h1>
                 <div className="flex pt-3">
-                    <input onChange={setInputTextHandler} type="text" placeholder="New thing to do" value={inputText} name="todo" id="todo" required className="w-full border-b-2 border-gray-600 outline-none bg-transparent p-2 text-sm placeholder:text-gray-700 text-black"></input>
+                    <input onChange={setInputTextHandler} type="text" maxLength='450' placeholder="New thing to do" value={inputText} name="todo" id="todo" required className="w-full border-b-2 border-gray-600 outline-none bg-transparent p-2 text-sm placeholder:text-gray-700 text-black"></input>
                     <button type="submit" className="p-2 gradient text-white">Add</button>
                 </div>
             </form>

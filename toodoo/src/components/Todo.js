@@ -11,13 +11,12 @@ export default function Todo({todo, todolist, setTodolist}){
 
     //Delete todo item
     const deleteHandler = async () => {
-        // setTodolist(todolist.filter((todoitem) => todoitem.id != todo.id));
         const docRef = doc(db, 'todolist', todo.id);
         await deleteDoc(docRef)
         toast.clearWaitingQueue();
         toast.error("You deleted a to-do item", {
             position: 'top-center',
-            autoClose: 750,
+            autoClose: 1000,
         })
     };
 
@@ -28,50 +27,22 @@ export default function Todo({todo, todolist, setTodolist}){
             toast.clearWaitingQueue();
             toast.success("You edited a to-do item", {
                 position: 'top-center',
-                autoClose: 750,
+                autoClose: 1000,
             });  
         }
     }
 
     //Edit todo item
     const editHandler = async (e) => {
-        // setTodolist(todolist.map(todoitem => {
-        //     if(todoitem.id === todo.id){
-        //         return {
-        //             ...todoitem, content: e.target.value
-        //         }
-        //     }
-        //     return todoitem;
-        // }))
         const docRef = doc(db, 'todolist', todo.id);
         await updateDoc(docRef, {
             ...todo, content: e.target.value
+            
         })
     }
 
     //Complete todo item
     const completeHandler = async () => {
-        // setTodolist(todolist.map((todoitem) => {
-        //     if(todoitem.id === todo.id){
-        //         if(!todoitem.completed){
-        //             toast.clearWaitingQueue();
-        //             toast.success("You completed a to-do item.", {
-        //             position: "top-center",
-        //             autoClose: 750
-        //             });
-        //         }else {
-        //             toast.clearWaitingQueue();
-        //             toast.success("You removed a to-do item from your completed list.", {
-        //                 position: "top-center",
-        //                 autoClose: 750
-        //             });
-        //         }
-        //         return {
-        //             ...todoitem, completed: !todoitem.completed,
-        //         }
-        //     }
-        //     return todoitem;
-        // }))
         const docRef = doc(db, 'todolist', todo.id);
         await updateDoc(docRef, {
             ...todo, completed: !todo.completed
@@ -80,27 +51,6 @@ export default function Todo({todo, todolist, setTodolist}){
 
     //Prioritize todo item
     const priorityHandler = async () => {
-        // setTodolist(todolist.map(todoitem => {
-        //     if(todoitem.id === todo.id){
-        //         if(!todoitem.priority){
-        //             toast.clearWaitingQueue();
-        //             toast.success("You added a to-do item to your priority list.", {
-        //             position: "top-center",
-        //             autoClose: 750
-        //             });
-        //         }else {
-        //             toast.clearWaitingQueue();
-        //             toast.success("You removed a to-do item from your priority list.", {
-        //                 position: "top-center",
-        //                 autoClose: 750
-        //             });
-        //         }
-        //         return {
-        //             ...todoitem, priority: !todoitem.priority
-        //         }
-        //     }
-        //     return todoitem;
-        // }))
         const docRef = doc(db, 'todolist', todo.id);
         await updateDoc(docRef, {
             ...todo, priority: !todo.priority
