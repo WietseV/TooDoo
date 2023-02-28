@@ -1,7 +1,7 @@
 
 ## TooDoo
 
-This project is currently hosted on vercel. If you are interested of checking it out yourself have a look at: [TooDoo](https://too-doo-delta.vercel.app)
+This project is currently hosted on vercel. If you are interested of checking it out yourself have a look at: [TooDoo](https://too-doo-wietsev.vercel.app)
 
 The scope of this project was to build a to-do web application. The intend was to improve my back-end skills with node.js and later I decided to use firebase to get a feel on working with api's in [Next.js](https://nextjs.org/).
 
